@@ -6,32 +6,33 @@ on:
   pull_request:
     branches: [ test/automacao, master ]
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * *'  # Executa diariamente à meia-noite
 
 jobs:
   playwright-tests:
     name: Playwright Tests
     runs-on: ubuntu-latest
-    
+
     steps:
-      - uses: actions/checkout@v3
-      
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
           cache: 'npm'
-          
+
       - name: Install dependencies
         run: npm ci
-        
+
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
-        
+
       - name: Run Playwright tests
         run: npm test
-        
-      - name: Upload test results
+
+      - name: Upload Playwright report
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -42,17 +43,18 @@ jobs:
   k6-tests:
     name: k6 Load Tests
     runs-on: ubuntu-latest
-    
+
     steps:
-      - uses: actions/checkout@v3
-      
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: Run k6 tests with Docker
         run: |
           docker run --rm -i \
             -v ${PWD}/k6:/app/k6 \
             -v ${PWD}/k6-results:/app/k6-results \
             grafana/k6 run /app/k6/load-test.js
-            
+
       - name: Upload k6 results
         if: always()
         uses: actions/upload-artifact@v4
