@@ -1,0 +1,19 @@
+FROM mcr.microsoft.com/playwright:v1.40.0-focal
+
+WORKDIR /app
+
+# Copiar package.json primeiro
+COPY package.json ./
+
+# Instalar dependências com flag para ignorar conflitos de peer dependencies
+RUN npm install --legacy-peer-deps
+
+# Copiar o restante dos arquivos
+COPY playwright.config.js ./
+COPY tests/ ./tests/
+
+# Instalar navegadores do Playwright
+RUN npx playwright install --with-deps chromium firefox webkit
+
+# Definir comando padrão
+CMD ["npx", "playwright", "test"]

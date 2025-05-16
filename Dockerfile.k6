@@ -1,0 +1,9 @@
+FROM grafana/k6:latest
+
+WORKDIR /app
+
+# Copiar arquivos de teste k6
+COPY k6/ ./k6/
+
+# Definir comando padrão
+CMD ["run", "k6/load-test.js"]
