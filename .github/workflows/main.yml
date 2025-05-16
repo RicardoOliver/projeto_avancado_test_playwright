@@ -2,9 +2,9 @@ name: Sauce Demo Test Suite
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ test/automacao, master ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ test/automacao, master ]
   schedule:
     - cron: '0 0 * * *'  # Executa diariamente à meia-noite
 
