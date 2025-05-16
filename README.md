@@ -53,7 +53,7 @@ Este é um projeto avançado de testes automatizados para o site Sauce Demo (htt
 
 ## Estrutura do Projeto
 
-\`\`\`
+```bash
 sauce-demo-tests/
 ├── tests/
 │   ├── login.spec.js
@@ -101,7 +101,7 @@ sauce-demo-tests/
 ├── playwright.config.js
 ├── package.json
 └── README.md
-\`\`\`
+```
 
 ## Requisitos
 
