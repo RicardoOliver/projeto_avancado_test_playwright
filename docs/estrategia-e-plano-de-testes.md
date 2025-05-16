@@ -2,9 +2,9 @@
 
 ## 📋 Introdução
 
-Olá equipe! Este documento apresenta nossa estratégia e plano de testes para o Sauce Demo. Desenvolvemos uma abordagem abrangente que combina diferentes tipos de testes para garantir a melhor qualidade possível do produto.
+Olá QAs! Este documento apresenta nossa estratégia e plano de testes para o Sauce Demo. Desenvolvi uma abordagem abrangente que combina diferentes tipos de testes para garantir a melhor qualidade possível do produto.
 
-Nossa meta é simples: garantir que o Sauce Demo funcione perfeitamente para todos os usuários, em qualquer dispositivo, mesmo sob carga elevada.
+Minha meta é simples: garantir que o Sauce Demo funcione perfeitamente para todos os usuários, em qualquer dispositivo, mesmo sob carga elevada.
 
 ## 🎯 Objetivos
 
