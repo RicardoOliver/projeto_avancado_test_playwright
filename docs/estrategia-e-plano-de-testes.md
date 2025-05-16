@@ -147,16 +147,16 @@ Este plano não é estático! Vamos revisar e ajustar regularmente com base em:
 
 ## 📝 Conclusão
 
-Nossa estratégia de testes para o Sauce Demo combina automação abrangente, foco em qualidade e monitoramento contínuo. Com esta abordagem, estamos confiantes de que entregaremos um produto de alta qualidade que atenda às expectativas dos usuários.
+Minha estratégia de testes para o Sauce Demo combina automação abrangente, foco em qualidade e monitoramento contínuo. Com esta abordagem, estou confiante de que entregarei um produto de alta qualidade que atenda às expectativas dos usuários.
 
-Vamos trabalhar juntos para fazer do Sauce Demo um exemplo de excelência em qualidade de software!
+Vou trabalhar  para fazer do Sauce Demo um exemplo de excelência em qualidade de software!
 
 ---
 
-*Documento criado por: [Seu Nome]*  
-*Data: [Data Atual]*  
+*Documento criado por: Ricardo Oliveira*  
+*Data: 16/05/2025*  
 *Versão: 1.0*
 \`\`\`
 
-Este documento apresenta uma estratégia e plano de testes abrangente para o Sauce Demo, com uma linguagem mais humanizada e conversacional, mantendo o rigor técnico necessário. Você pode personalizar as seções conforme necessário para seu contexto específico.
+
 
