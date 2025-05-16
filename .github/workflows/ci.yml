@@ -2,9 +2,9 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ main ]
+    branches: [ test/automacao ]
   pull_request:
-    branches: [ main ]
+    branches: [ test/automacao ]
   schedule:
     - cron: '0 0 * * *'  # Executa diariamente à meia-noite
 
