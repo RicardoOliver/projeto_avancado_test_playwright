@@ -34,14 +34,20 @@ jobs:
         continue-on-error: true
 
       - name: Run Playwright tests
-        run: npm test
+        run: |
+          npx playwright test
         continue-on-error: true
 
-      - name: Upload Playwright report
+      - name: Generate Playwright HTML report
+        run: |
+          npx playwright show-report --output=playwright-report
+        continue-on-error: true
+
+      - name: Upload Playwright HTML report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report
+          name: playwright-html-report
           path: playwright-report/
           retention-days: 30
         continue-on-error: true
@@ -60,8 +66,8 @@ jobs:
           mkdir -p k6-results
           docker run --rm -i \
             -v ${PWD}/k6:/app/k6 \
-            -v ${PWD}/k6-results:/app/k6-results \
-            grafana/k6 run /app/k6/load-test.js --out json=/app/k6-results/results.json
+            -v ${PWD}/k6-results:/external \
+            grafana/k6 run /app/k6/load-test.js --out json=/external/results.json
         continue-on-error: true
 
       - name: Upload k6 results
