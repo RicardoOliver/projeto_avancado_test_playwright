@@ -57,10 +57,11 @@ jobs:
 
       - name: Run k6 tests with Docker
         run: |
+          mkdir -p k6-results
           docker run --rm -i \
             -v ${PWD}/k6:/app/k6 \
             -v ${PWD}/k6-results:/app/k6-results \
-            grafana/k6 run /app/k6/load-test.js
+            grafana/k6 run /app/k6/load-test.js --out json=/app/k6-results/results.json
         continue-on-error: true
 
       - name: Upload k6 results
