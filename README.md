@@ -2,6 +2,8 @@
 
 Este é um projeto avançado de testes automatizados para o site Sauce Demo (https://www.saucedemo.com/v1/) utilizando Playwright, JavaScript e k6 para testes de carga, tudo containerizado com Docker.
 
+## A explicação do resultado dos testes esta na pasta .github/workflows | README-CI.md
+
 ## Novos Recursos Implementados
 
 1. **Docker** - Ambiente completo containerizado com:
