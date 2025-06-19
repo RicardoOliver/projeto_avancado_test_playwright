@@ -9,6 +9,7 @@ test.describe("Login Functionality", () => {
     await page.fill("#user-name", "standard_user")
     await page.fill("#password", "secret_sauce")
     await page.click("#login-button")
+    await page.waitForURL("**/inventory.html")
 
     // Verify redirect to inventory page
     await expect(page).toHaveURL("https://www.saucedemo.com/v1/inventory.html")
